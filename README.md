@@ -3,8 +3,8 @@
 > Full-stack insurance premium estimation tool : computes auto and home quotes based on driver profile, vehicle type, and coverage options.
 
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
+![Java](https://img.shields.io/badge/Java-21-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.14-brightgreen)
 ![React](https://img.shields.io/badge/React-TypeScript-blue)
 ![AWS](https://img.shields.io/badge/deployed-AWS-orange)
 
@@ -22,7 +22,7 @@ Primio lets users input their driver profile, vehicle details, and desired cover
 
 | Layer | Technology |
 |---|---|
-| Backend | Java 17, Spring Boot 3, Maven |
+| Backend | Java 21, Spring Boot 3.5.14, Maven |
 | Frontend | React, TypeScript |
 | Database | PostgreSQL |
 | Infrastructure | Docker, AWS, CI/CD |
