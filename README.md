@@ -41,6 +41,20 @@ Primio lets users input their driver profile, vehicle details, and desired cover
 
 ---
 
+## Example HTTP Response (Backend)
+
+```json
+{
+  "premium": 845.00,
+  "factors": [
+    { "code": "BASE_PREMIUM", "amount": 500.00 },
+    { "code": "YOUNG_DRIVER", "amount": 150.00 },
+    { "code": "PAST_ACCIDENTS", "amount": 240.00 },
+    { "code": "COVERAGE_MULTIPLIER", "amount": 253.50 }
+  ]
+}
+```
+
 ## Live Demo
 
 🔗 Coming soon — `primio.petiton.dev`
