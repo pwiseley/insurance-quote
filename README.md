@@ -50,7 +50,7 @@ Primio lets users input their driver profile, vehicle details, and desired cover
     { "code": "BASE_PREMIUM", "amount": 500.00 },
     { "code": "YOUNG_DRIVER", "amount": 150.00 },
     { "code": "PAST_ACCIDENTS", "amount": 240.00 },
-    { "code": "COVERAGE_MULTIPLIER", "amount": 253.50 }
+    { "code": "COVERAGE_ADJUSTMENT", "amount": 253.50 }
   ]
 }
 ```

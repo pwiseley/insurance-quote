@@ -5,13 +5,13 @@ public enum InsuranceType {
     AUTO(500.0),
     HOME(800.0);
 
-    private final double basePremium;
+    private final double baseCost;
 
-    InsuranceType(double basePremium) {
-        this.basePremium = basePremium;
+    InsuranceType(double baseCost) {
+        this.baseCost = baseCost;
     }
 
-    public double getBasePremium() {
-        return basePremium;
+    public double getBaseCost() {
+        return baseCost;
     }
 }

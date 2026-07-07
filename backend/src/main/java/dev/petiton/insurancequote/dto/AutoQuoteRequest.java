@@ -19,4 +19,4 @@ public record AutoQuoteRequest(
 
         @NotNull(message = "Coverage Type is required.")
         CoverageType coverageType
-) {}
+) implements QuoteRequest {}

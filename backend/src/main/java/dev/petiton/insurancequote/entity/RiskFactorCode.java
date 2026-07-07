@@ -1,7 +1,7 @@
 package dev.petiton.insurancequote.entity;
 
 public enum RiskFactorCode {
-    BASE_PREMIUM,
+    BASE_COST,
     YOUNG_DRIVER,
     SENIOR_DRIVER,
     EXPERIENCED_DRIVER,
@@ -9,5 +9,5 @@ public enum RiskFactorCode {
     HOME_VALUE,
     OLD_BUILDING,
     ALARM_DISCOUNT,
-    COVERAGE_MULTIPLIER
+    COVERAGE_ADJUSTMENT
 }

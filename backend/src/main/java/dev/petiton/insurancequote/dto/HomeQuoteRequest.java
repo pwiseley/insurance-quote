@@ -22,4 +22,4 @@ public record HomeQuoteRequest(
 
         @NotNull(message = "Coverage type is required")
         CoverageType coverageType
-) {}
+) implements QuoteRequest {}

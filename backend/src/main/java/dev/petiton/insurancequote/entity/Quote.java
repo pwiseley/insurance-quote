@@ -19,7 +19,7 @@ public abstract class Quote {
     private CoverageType coverageType;
 
     @Column(nullable = false, precision = 12, scale = 2)
-    private BigDecimal premium;
+    private BigDecimal totalCost;
 
     @Column(nullable = false)
     private Instant createdAt;
@@ -43,12 +43,12 @@ public abstract class Quote {
         return coverageType;
     }
 
-    public BigDecimal getPremium() {
-        return premium;
+    public BigDecimal getTotalCost() {
+        return totalCost;
     }
 
-    public void setPremium(BigDecimal premium) {
-        this.premium = premium;
+    public void setTotalCost(BigDecimal totalCost) {
+        this.totalCost = totalCost;
     }
 
     public Instant getCreatedAt() {
