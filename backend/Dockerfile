@@ -1,20 +1,18 @@
-FROM eclipse-temurin:21-jdk-alpine
+FROM eclipse-temurin:21-jdk-alpine AS builder
 RUN addgroup -S spring && adduser -S spring -G spring
-
 WORKDIR /app
-
 COPY pom.xml .
 COPY .mvn .mvn
 COPY mvnw .
+RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
-
 COPY src ./src
 RUN ./mvnw package -DskipTests
 
-ARG JAR_FILE=target/*.jar
+FROM eclipse-temurin:21-jre-alpine
+RUN addgroup -S spring && adduser -S spring -G spring
+WORKDIR /app
 USER spring:spring
-COPY ${JAR_FILE} app.jar
-
+COPY --from=builder /app/target/*.jar app.jar
 EXPOSE 8080
-
 ENTRYPOINT ["java", "-jar", "app.jar"]

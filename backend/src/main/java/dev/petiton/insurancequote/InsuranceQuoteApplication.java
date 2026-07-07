@@ -1,4 +1,4 @@
-package dev.petiton.insurance_quote;
+package dev.petiton.insurancequote;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
