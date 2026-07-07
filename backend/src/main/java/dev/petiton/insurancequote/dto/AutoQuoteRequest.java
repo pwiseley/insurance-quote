@@ -1,5 +1,6 @@
 package dev.petiton.insurancequote.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import dev.petiton.insurancequote.entity.CoverageType;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -18,5 +19,8 @@ public record AutoQuoteRequest(
         int pastAccidents,
 
         @NotNull(message = "Coverage Type is required.")
-        CoverageType coverageType
+        CoverageType coverageType,
+
+        @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+        AutoRatingParameters parameters
 ) implements QuoteRequest {}
