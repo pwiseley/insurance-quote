@@ -66,7 +66,7 @@ export const HOME_DEFAULTS = {
 
 export const T = {
   en: {
-    subtitle: "A simple tool to calculate an insurance quote", docs: "Documentation",
+    subtitle: "A simple tool to simulate an insurance quote", docs: "Documentation",
     heading: "Get your quote done", auto: "Auto", home: "Home",
     profile: "Driver profile", property: "Property details", coverage: "Coverage level",
     estimate: "Detailed estimate", calculate: "Calculate quote", calculating: "Calculating…",
@@ -78,7 +78,7 @@ export const T = {
     errorTitle: "Could not calculate",
   },
   fr: {
-    subtitle: "Un outil simple pour calculer une soumission d'assurance", docs: "Documentation",
+    subtitle: "Un outil simple pour simuler une soumission d'assurance", docs: "Documentation",
     heading: "Obtenez votre soumission", auto: "Auto", home: "Habitation",
     profile: "Profil du conducteur", property: "Détails de la propriété", coverage: "Niveau de couverture",
     estimate: "Estimation détaillée", calculate: "Calculer la soumission", calculating: "Calcul en cours…",
