@@ -17,33 +17,12 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   top: 24px;
 }
 
-.title-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin: 40px 0 36px;
-}
-
-.settings-btn {
-  position: absolute;
-  right: 0;
-}
-
 @media (max-width: 720px) {
   .quote-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
   .quote-result {
-    position: static;
-  }
-  .title-row {
-    flex-direction: column;
-    gap: 18px;
-    margin: 28px 0;
-  }
-  .settings-btn {
     position: static;
   }
 }

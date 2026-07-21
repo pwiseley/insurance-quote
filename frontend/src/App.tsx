@@ -75,15 +75,15 @@ export default function App() {
       <div style={{ maxWidth: 1120, margin: "0 auto", padding: "clamp(18px,4vw,40px)" }}>
         <Header lang={lang} setLang={setLang} />
 
-        <div className="title-row">
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", position: "relative", margin: "40px 0 36px" }}>
           <div style={{ textAlign: "center" }}>
             <h2 style={{ margin: "0 0 18px", fontSize: "clamp(22px,3vw,30px)", fontWeight: 600, letterSpacing: "-0.02em" }}>{t.heading}</h2>
             <Toggle options={["AUTO", "HOME"] as QuoteMode[]} value={mode}
               onChange={(m) => { setMode(m); setResult(null); setError(null); }}
               labels={{ AUTO: t.auto, HOME: t.home }} />
           </div>
-          <button onClick={openSettings} title={t.settings} className="settings-btn"
-            style={{ background: "#fff", border: `1px solid ${C.line}`,
+          <button onClick={openSettings} title={t.settings}
+            style={{ position: "absolute", right: 0, background: "#fff", border: `1px solid ${C.line}`,
               borderRadius: 9, padding: "10px 12px", cursor: "pointer", color: C.ink, display: "flex", alignItems: "center" }}>
             <SlidersHorizontal size={17} />
           </button>
