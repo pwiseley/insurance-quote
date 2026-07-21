@@ -9,7 +9,7 @@ export function Header({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => vo
       <div>
         <h1 style={{ margin: 0, fontSize: "clamp(24px,3.4vw,34px)", fontWeight: 800, letterSpacing: "-0.02em",
           fontFamily: "'Archivo Narrow','Arial Narrow',sans-serif", textTransform: "uppercase",
-          transform: "scaleY(1.18)", transformOrigin: "left", whiteSpace: "nowrap" }}>
+          transform: "scaleY(1.18)", transformOrigin: "left" }}>
           Insurance Quote
         </h1>
         <div style={{ fontSize: 12, color: C.muted, marginTop: 12 }}>{t.subtitle}</div>
