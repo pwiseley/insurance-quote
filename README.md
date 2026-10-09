@@ -1,63 +1,44 @@
-# 🛡️ Insurance Quote Calculator
+# Insurance Quote Calculator
 
-> Full-stack insurance premium estimation tool: computes auto and home quotes based on driver profile, property details, and coverage options.
+[Lire en français](README.FR.md)
 
-### [🚀 Live Demo](https://primio.petiton.dev) · [📖 API Docs (Swagger)](https://primio.petiton.dev/swagger-ui/index.html)
+Full-stack insurance premium estimation tool: computes `auto` and `home` quotes based on `driver profile`, `property details`, and `coverage options`.
 
-![Status](https://img.shields.io/badge/status-live-brightgreen)
-![Java](https://img.shields.io/badge/Java-21-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5-brightgreen)
-![React](https://img.shields.io/badge/React-TypeScript-blue)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
-![Railway](https://img.shields.io/badge/deployed-Railway-purple)
+> [Live Demo](https://primio.petiton.dev)
 
----
+## Contents
 
-## What it does
-
-Primio lets users enter a driver profile or property details, choose a coverage level, and receive an estimated insurance premium broken down by risk factor. Auto and home quotes are modeled as separate request types over a shared polymorphic API, and pricing rules are expressed as an ordered set of cost factors, keeping the business logic clean and independently testable.
-
----
+- [Tech Stack](#tech-stack)
+- [API Endpoints](#api-endpoints)
+- [API Examples](#api-examples)
+- [Related](#related)
 
 ## Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Backend | Java 21, Spring Boot 3.5, Maven |
-| Frontend | React, TypeScript, Vite |
-| Database | PostgreSQL |
-| Infrastructure | Docker, Railway, CI/CD |
-| Architecture | Controller / Service / Repository |
-
----
-
-## Key Features
-
-- Auto and home insurance quote estimation through a single polymorphic API
-- Rule-based pricing engine returning an itemized breakdown of every risk factor
-- JPA inheritance modeling the shared quote domain with type-specific rating
-- Bean Validation on all inputs (age bounds, positive values, required fields)
-- RESTful API with clean Controller / Service / Repository layering
-- React frontend with real-time quote calculation
-- Interactive API documentation via Swagger / OpenAPI
-- Dockerized and deployed on Railway
-
----
+| **Backend** | Java 21, Spring Boot 3.5, Maven |
+| **Frontend** | React, TypeScript, Vite |
+| **Database** | PostgreSQL |
+| **Infrastructure** | Docker, Railway, CI/CD |
+| **Architecture** | Controller / Service / Repository |
 
 ## API Endpoints
+
+> [API Docs (Swagger)](https://primio.petiton.dev/swagger-ui/index.html)
 
 | Method | Route | Purpose |
 |---|---|---|
 | `POST` | `/api/quotes/auto` | Estimate an auto insurance premium |
 | `POST` | `/api/quotes/home` | Estimate a home insurance premium |
 
-Coverage types: `BASIC`, `STANDARD`, `PREMIUM`. Full interactive documentation is available at **[/swagger-ui/index.html](https://primio.petiton.dev/swagger-ui/index.html)**.
+Coverage types: `BASIC`, `STANDARD`, `PREMIUM`.
 
----
+Auto and home quotes share a polymorphic API backed by **JPA inheritance**. Pricing rules are an ordered set of cost factors, returned itemized in every response. Inputs are checked with **Bean Validation** before any pricing runs.
 
 ## API Examples
 
-### Request — auto quote
+### Request: auto quote
 
 ```http
 POST /api/quotes/auto
@@ -73,7 +54,7 @@ Content-Type: application/json
 }
 ```
 
-### Successful response — `201 Created`
+### Response: `201 Created`
 
 The response echoes the client input and itemizes each cost factor that contributed to the total:
 
@@ -96,7 +77,7 @@ The response echoes the client input and itemizes each cost factor that contribu
 }
 ```
 
-### Error response — `400 Bad Request` (validation failure)
+### Error: `400 Bad Request`
 
 Invalid input is rejected before any pricing runs:
 
@@ -106,10 +87,6 @@ Invalid input is rejected before any pricing runs:
   "coverageType": "Coverage Type is required."
 }
 ```
-
-See the full request/response schemas at **[/swagger-ui/index.html](https://primio.petiton.dev/swagger-ui/index.html)**.
-
----
 
 ## Related
 
